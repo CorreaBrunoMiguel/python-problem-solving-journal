@@ -1,0 +1,9 @@
+# Cache e bytecode do Python
+__pycache__/
+*.py[cod]
+
+# Ambiente virtual local
+.venv/
+
+# Checkpoints de notebooks
+.ipynb_checkpoints/
