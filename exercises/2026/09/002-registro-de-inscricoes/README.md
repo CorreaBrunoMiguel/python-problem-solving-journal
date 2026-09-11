@@ -1,10 +1,11 @@
 # 002 — Registro de inscrições
 
 - **Início:** 11/09/2026
-- **Estado:** em revisão
+- **Estado:** concluído
+- **Conclusão:** 11/09/2026
 - **Objetivo técnico:** identificar inscrições repetidas e preservar a ordem de chegada das inscrições únicas.
 - **Autoria do enunciado:** assistente de IA.
-- **Implementação:** primeira tentativa entregue; explicação do raciocínio pendente.
+- **Implementação:** segunda entrega analisada; explicação da ordem e apoio nos testes registrados no review.
 
 ## Problema
 
@@ -106,7 +107,7 @@ python exercises/2026/09/002-registro-de-inscricoes/test_solution.py
 
 Executar sem `-O`. Se todos os asserts executados passarem e não houver impressões, o comando terminará sem saída.
 
-**Verificação atual:** nove asserts enviados e quatro casos adicionais do assistente passaram em Python 3.12.14 no commit `c56717a`. Veja limites e detalhes no [REVIEW.md](REVIEW.md).
+**Verificação atual:** 13 asserts enviados passaram em Python 3.12.14 no commit `be148f4`, incluindo ordem não alfabética e independência da saída. A bateria adicional da primeira revisão também permanece documentada no [REVIEW.md](REVIEW.md).
 
 ## Registro de tentativas e análise
 
@@ -114,4 +115,4 @@ Faça commit e push da tentativa para revisão. O assistente analisará correç�
 
 As revisões serão acrescentadas a `REVIEW.md`, com o commit analisado e o apoio recebido. Registre justificativas reais; não é necessário produzir um relatório extenso.
 
-**Situação atual:** tentativa 01 analisada, sem erro funcional encontrado. Em revisão para explicação da abordagem e ampliação dos testes de ordem e independência da saída. Consulte o [REVIEW.md](REVIEW.md).
+**Situação atual:** concluído após análise do commit `be148f4`. Requisitos e verificações combinadas atendidos, com orientação na ampliação dos testes. Melhorias não bloqueantes e limites da avaliação estão registrados no [REVIEW.md](REVIEW.md).
