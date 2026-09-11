@@ -1,3 +1,5 @@
+from copy import deepcopy
+
 from solution import resumir_despesas
 
 sem_despesas = []
@@ -12,12 +14,15 @@ despesas_teste = [
 ]
 
 # Testes
-teste = resumir_despesas(despesas_teste)
-assert teste['total_centavos'] == 10000, "Total calculado está errado"
-assert teste['por_categoria']['alimentacao'] == 4000, "Total dos gastos com alimentação está errado"
-assert teste['por_categoria']['transporte'] == 2000, "Total dos gastos com transporte está errado"
-assert teste['por_categoria']['lazer'] == 4000, "Total dos gastos com lazer está errado"
-assert teste["por_categoria"]['educacao'] == 0, "Total dos gastos com educacao está errado"
-teste = resumir_despesas(sem_despesas)
-assert teste["total_centavos"] == 0
-assert teste['por_categoria'] == {}
+antes = deepcopy(despesas_teste)
+obtido = resumir_despesas(despesas_teste)
+assert despesas_teste == antes, "A função modifica a lista passada como argumento"
+assert obtido['total_centavos'] == 10000, "Total calculado está errado"
+assert obtido['por_categoria']['alimentacao'] == 4000, "Total dos gastos com alimentação está errado"
+assert obtido['por_categoria']['transporte'] == 2000, "Total dos gastos com transporte está errado"
+assert obtido['por_categoria']['lazer'] == 4000, "Total dos gastos com lazer está errado"
+assert obtido["por_categoria"]['educacao'] == 0, "Total dos gastos com educacao está errado"
+esperado = {"total_centavos": 10000, "por_categoria": {"alimentacao": 4000, "transporte": 2000, "lazer": 4000}}
+obtido = resumir_despesas(sem_despesas)
+assert obtido["total_centavos"] == 0
+assert obtido['por_categoria'] == {}
