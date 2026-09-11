@@ -1,10 +1,10 @@
 # 002 — Registro de inscrições
 
 - **Início:** 11/09/2026
-- **Estado:** em andamento
+- **Estado:** em revisão
 - **Objetivo técnico:** identificar inscrições repetidas e preservar a ordem de chegada das inscrições únicas.
 - **Autoria do enunciado:** assistente de IA.
-- **Implementação e raciocínio:** a serem produzidos pelo aluno.
+- **Implementação:** primeira tentativa entregue; explicação do raciocínio pendente.
 
 ## Problema
 
@@ -106,7 +106,7 @@ python exercises/2026/09/002-registro-de-inscricoes/test_solution.py
 
 Executar sem `-O`. Se todos os asserts executados passarem e não houver impressões, o comando terminará sem saída.
 
-**Verificação atual:** nenhuma implementação recebida ou executada.
+**Verificação atual:** nove asserts enviados e quatro casos adicionais do assistente passaram em Python 3.12.14 no commit `c56717a`. Veja limites e detalhes no [REVIEW.md](REVIEW.md).
 
 ## Registro de tentativas e análise
 
@@ -114,4 +114,4 @@ Faça commit e push da tentativa para revisão. O assistente analisará correç�
 
 As revisões serão acrescentadas a `REVIEW.md`, com o commit analisado e o apoio recebido. Registre justificativas reais; não é necessário produzir um relatório extenso.
 
-**Situação atual:** enunciado disponibilizado; aguardando primeira tentativa.
+**Situação atual:** tentativa 01 analisada, sem erro funcional encontrado. Em revisão para explicação da abordagem e ampliação dos testes de ordem e independência da saída. Consulte o [REVIEW.md](REVIEW.md).
