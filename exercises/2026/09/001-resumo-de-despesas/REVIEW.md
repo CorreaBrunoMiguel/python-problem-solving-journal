@@ -80,3 +80,62 @@ O exercício fica em revisão para discutir a tentativa e suas verificações. N
 **Pergunta de retomada:** por que a inicialização de `gastos` antes do laço faz a lista vazia produzir o retorno exigido, mesmo sem um if específico para esse caso?
 
 Depois dessa explicação, discutir as lacunas dos testes e a versão do Python utilizada. Nenhuma implementação do aluno foi modificada nesta revisão.
+
+## Revisão 02 — 11/09/2026
+
+- **Commit analisado:** [d98e9a8](https://github.com/CorreaBrunoMiguel/python-problem-solving-journal/commit/d98e9a8471e1374e9ebcab088ddb8465dec00865)
+- **Mensagem:** `test: organiza e amplia verificações do desafio 001`
+- **Arquivos:** `solution.py` e `test_solution.py`.
+- **Estado:** em revisão.
+- **Parecer:** comportamento correto nos casos executados; organização e cobertura melhoraram. Algumas ações combinadas ficaram incompletas. Nenhum arquivo de implementação ou testes foi modificado pelo assistente.
+
+### Evolução em relação à primeira revisão
+
+| Item | Situação |
+| --- | --- |
+| Nome `solution.py` | Atendido; função importada pelo arquivo de testes. |
+| Separação da solução e dos testes | Atendida; importar a solução não executa dados, asserts ou impressões. |
+| Lista vazia com asserts | Atendido: total zero e dicionário de categorias vazio. |
+| Categoria com zero | Atendido: inclusão de educação com zero e assert correspondente. |
+| Teste de preservação da entrada | Ainda ausente na entrega. |
+| Comparação do retorno completo | Ainda ausente; as verificações seguem por campo. |
+| Quatro espaços por nível | Parcial: corpo da função usa quatro, mas o corpo do for usa seis; o corpo do if usa sete e o do else, oito. |
+| Ambiente e execução | Documentados pelo assistente com Python 3.12.7 informado pelo aluno; comando dos testes agora confirmado no ambiente de revisão. |
+
+A retirada da lista maior e das impressões deixou o arquivo de testes focado. Manter testes simples no nível do módulo é suficiente para o modo de execução direto adotado; não é necessário introduzir framework.
+
+### Verificação executada
+
+Ambiente do assistente: **Python 3.12.14**. Os arquivos foram obtidos do commit indicado e executados sem mudanças.
+
+- `python review2/test_solution.py`, em cópia temporária dos dois arquivos com a mesma relação de importação: saída vazia e código de saída zero. **Sete asserts enviados pelo aluno passaram.**
+- Três casos adicionais do assistente: lista vazia; uma categoria com zero; categoria repetida com valores 10 e 20 junto de outra com zero.
+- Nos três casos, comparação do retorno completo com o esperado e comparação da entrada com cópia profunda anterior à chamada: **todos passaram**.
+- Nenhuma falha funcional encontrada. A cobertura é delimitada, não exaustiva. Os casos adicionais não foram adicionados ao repositório e não contam como testes de autoria do aluno.
+
+### Apontamentos
+
+**Melhoria recomendada — cobertura:** acrescentar a verificação da preservação da entrada, ainda pendente. O código atual preserva os dados, mas os testes entregues não detectariam uma futura alteração indevida. Comparar também o retorno completo permite detectar chaves extras, além dos valores já conferidos.
+
+**Melhoria recomendada — indentação:** aplicar quatro espaços em cada nível, não apenas no corpo da função. No código atual, as instruções dentro do for devem ficar no nível de oito espaços e as dos ramos if/else, no de doze. A indentação atual é aceita pelo interpretador, mas é inconsistente com o padrão acordado. Persistem espaços finais e asserts longos mencionados na primeira revisão; são questões de estilo, não erros funcionais.
+
+**Melhoria recomendada — simplicidade:** no else, a atribuição direta do valor foi substituída por atribuir zero e depois somar. O comportamento continua correto, inclusive para uma despesa de valor zero. Essa mudança acrescenta uma operação sem ampliar o atendimento ao contrato; a versão anterior já preservava categorias com zero. Antes de sugerir alteração, é necessário ouvir a justificativa do aluno. O custo assintótico permanece o mesmo.
+
+**Melhoria recomendada — documentação:** a docstring ainda usa “valor centavos” em lugar da chave literal `valor_centavos`. A organização do README foi fornecida pelo assistente a pedido do aluno, não conta como documentação escrita autonomamente por ele.
+
+### Compreensão e apoio recebido
+
+Após a primeira revisão, o aluno explicou que inicializa a variável de retorno e, para a lista vazia, ela mantém o resultado inicial. O assistente ajustou a formulação: o laço executa zero iterações, em vez de “não retornar nada”. Há evidência de compreensão da inicialização para o caso vazio, com esclarecimento pontual de terminologia.
+
+Para os novos testes, houve orientação sobre casos faltantes, separação de arquivos e comparação do retorno vazio. As verificações foram implementadas pelo aluno; não foram fornecidos os asserts completos. Portanto, a evolução nesta revisão é orientada, não uma demonstração independente em um problema novo.
+
+- **Testes com assert:** progresso parcial, agora cobrindo vazio e categoria zero.
+- **Organização em módulos:** progresso parcial, com importação funcional.
+- **Inicialização e entrada vazia:** compreensão explicada neste exercício; ainda insuficiente para classificar domínio em situações variadas.
+- **Complexidade:** ainda não avaliada por explicação do aluno.
+
+### Retomada
+
+**Pergunta:** o que motivou a mudança do else para inicializar a categoria com zero e depois somar? Você esperava resolver algum caso que a atribuição direta anterior não atendia?
+
+Permanecem como ações combinadas a verificação de preservação da entrada, a comparação do retorno completo e a padronização dos níveis de indentação. Não é necessário iniciar outro desafio ou substituir o algoritmo.
