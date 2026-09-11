@@ -22,7 +22,8 @@ assert obtido['por_categoria']['alimentacao'] == 4000, "Total dos gastos com ali
 assert obtido['por_categoria']['transporte'] == 2000, "Total dos gastos com transporte está errado"
 assert obtido['por_categoria']['lazer'] == 4000, "Total dos gastos com lazer está errado"
 assert obtido["por_categoria"]['educacao'] == 0, "Total dos gastos com educacao está errado"
-esperado = {"total_centavos": 10000, "por_categoria": {"alimentacao": 4000, "transporte": 2000, "lazer": 4000}}
+esperado = {"total_centavos": 10000, "por_categoria": {"alimentacao": 4000, "transporte": 2000, "lazer": 4000, "educacao": 0}}
+assert esperado == obtido
 obtido = resumir_despesas(sem_despesas)
 assert obtido["total_centavos"] == 0
 assert obtido['por_categoria'] == {}
