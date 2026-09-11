@@ -139,3 +139,40 @@ Para os novos testes, houve orientação sobre casos faltantes, separação de a
 **Pergunta:** o que motivou a mudança do else para inicializar a categoria com zero e depois somar? Você esperava resolver algum caso que a atribuição direta anterior não atendia?
 
 Permanecem como ações combinadas a verificação de preservação da entrada, a comparação do retorno completo e a padronização dos níveis de indentação. Não é necessário iniciar outro desafio ou substituir o algoritmo.
+
+## Revisão 03 — 11/09/2026
+
+- **Commit analisado:** [b87924e](https://github.com/CorreaBrunoMiguel/python-problem-solving-journal/commit/b87924e06db63c9377f3640f4a38fea3cd9fca86)
+- **Mensagem:** `test: verifica preservação da entrada e retorno completo no desafio 001`.
+- **Escopo da mudança:** apenas `test_solution.py`; implementação inalterada.
+- **Estado:** em revisão.
+
+### Verificação e resultado
+
+Executados os arquivos desse commit, sem alterações, em Python 3.12.14 no ambiente do assistente. O arquivo de testes terminou sem saída e com código zero: **oito asserts passaram**.
+
+A nova verificação de preservação está correta: `deepcopy` é executado antes da chamada e a entrada é comparada com a cópia depois. Isso inclui os conteúdos dos dicionários internos. Esta pendência está atendida no caso enviado.
+
+A comparação completa continua pendente. Há dois problemas concretos no teste em preparação:
+
+1. **Verificação ausente:** `esperado` é definido, mas não é usado em nenhuma comparação ou assert. Criar esse dicionário não verifica o retorno.
+2. **Erro no resultado esperado:** falta a categoria `"educacao": 0`, presente na entrada e exigida no retorno. O próprio assert individual de educação já exige esse comportamento.
+
+O assistente executou uma comparação diagnóstica entre o retorno da função para `despesas_teste` e o `esperado` declarado: o resultado foi **False**, pela ausência de educação no esperado. Isso é uma inconsistência na referência do teste, não um erro da função.
+
+Também foi confirmado que, ao fim do arquivo, `obtido` contém o retorno da lista vazia. Portanto, acrescentar uma comparação no final sem considerar qual chamada produziu `obtido` compararia casos diferentes.
+
+Não foram repetidos testes amplos da função: a implementação não mudou desde a revisão anterior. A verificação foi concentrada nas mudanças e na pendência concreta.
+
+### Orientação
+
+Revisar o conteúdo esperado à luz de todas as categorias da entrada e realizar a comparação completa enquanto `obtido` ainda representa esse mesmo caso. Manter os dados, o retorno esperado e a verificação de cada caso próximos ajuda a evitar essa troca de contexto. Nenhum teste ou código de solução foi reescrito pelo assistente.
+
+### Acordos e explicações posteriores à revisão 02
+
+- **Formatação:** por pedido do aluno, a padronização de espaços foi adiada para o próximo desafio. Não impede a conclusão do 001 e não será exigida nova alteração de estilo nesta entrega.
+- **Inicialização no else:** o aluno explicou que pensou em usar `.get()`, não lembrava a sintaxe e introduziu zero antes da soma por uma segurança não associada a uma falha concreta. O assistente explicou que a atribuição direta anterior já criava a chave e preservava valores zero, e apresentou um exemplo de `.get()` em outro domínio. A mudança atual continua funcional; simplificá-la é opcional.
+- **Apoio nos testes:** foram explicados assert, cópia profunda e igualdade entre dicionários com exemplo distinto. O aluno implementou a verificação de preservação corretamente após essa orientação. Isso evidencia progresso orientado, não domínio autônomo já consolidado.
+- **Competência de testes:** progresso parcial. Há avanço na preservação da entrada; ainda é necessário conectar explicitamente o resultado esperado à condição verificada.
+
+**Retomada:** completar apenas a comparação do retorno integral do caso preenchido, corrigindo sua referência e mantendo a chamada correspondente. A solução permanece intacta e as revisões anteriores estão preservadas.
