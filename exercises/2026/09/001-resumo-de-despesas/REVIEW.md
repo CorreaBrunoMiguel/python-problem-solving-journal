@@ -176,3 +176,31 @@ Revisar o conteúdo esperado à luz de todas as categorias da entrada e realizar
 - **Competência de testes:** progresso parcial. Há avanço na preservação da entrada; ainda é necessário conectar explicitamente o resultado esperado à condição verificada.
 
 **Retomada:** completar apenas a comparação do retorno integral do caso preenchido, corrigindo sua referência e mantendo a chamada correspondente. A solução permanece intacta e as revisões anteriores estão preservadas.
+
+## Revisão 04 — 11/09/2026 — Encerramento
+
+- **Commit analisado:** [2bc5cbc](https://github.com/CorreaBrunoMiguel/python-problem-solving-journal/commit/2bc5cbcec961146f1cd6cfbee61884f67322bc7c).
+- **Mensagem:** `feat: mini revisão`.
+- **Estado:** concluído no escopo do desafio, com orientação nos testes.
+
+### Integração do Git
+
+O commit chegou à main remota com pai `d087ba5`, preservando os commits de documentação. Isso confirma a integração da mini revisão após as atualizações remotas. O commit local anteriormente mostrado como `a0cdf92` passou a `2bc5cbc` após o rebase. Não há acesso ao estado atual da árvore de trabalho do computador do aluno.
+
+### Verificação e resolução da pendência
+
+Executado `test_solution.py` com `solution.py` do commit analisado, sem mudanças, no ambiente de revisão Python 3.12.14. **Nove asserts passaram**, com saída vazia e código de saída zero.
+
+O aluno incluiu `educacao: 0` no resultado esperado e acrescentou a igualdade entre esperado e obtido antes da chamada com lista vazia. A comparação agora associa os dados ao resultado correto e verifica o retorno completo. A verificação de preservação por deepcopy continua presente e passou.
+
+A implementação não mudou; não foi necessário repetir a bateria adicional das revisões anteriores. A execução atual valida os testes enviados, e a inspeção e verificações anteriores fundamentam a correção do algoritmo no contrato delimitado.
+
+### Encerramento e limites
+
+Os requisitos essenciais estão atendidos e as pendências de verificação combinadas foram resolvidas. As explicações do aluno sobre a inicialização no caso vazio e a motivação da mudança no else foram registradas nas revisões anteriores, juntamente com os esclarecimentos recebidos.
+
+A formatação permanece aceita nesta entrega, com cobrança adiada para o próximo desafio por acordo. A simplificação do else e ajustes de docstring são melhorias não bloqueantes, já registradas; não se exige nova refatoração.
+
+**Conclusão não equivale a domínio consolidado:** a solução foi entregue pelo aluno sem implementação fornecida pelo assistente no contexto acessível; os testes foram ampliados com orientação significativa sobre assert, deepcopy, casos e comparação completa. Testes e autonomia devem ser retomados em desafios futuros. Não há evidência suficiente para elevar as competências já classificadas como progresso parcial a domínio. Complexidade continua não avaliada por explicação do aluno.
+
+Nenhum código ou teste do aluno foi alterado pelo assistente. Todas as revisões anteriores permanecem preservadas.
