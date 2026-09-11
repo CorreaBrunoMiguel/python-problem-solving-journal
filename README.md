@@ -34,4 +34,4 @@ registradas conforme os primeiros exercícios forem implementados.
 
 | ID | Título | Início | Estado |
 | --- | --- | --- | --- |
-| 001 | [Resumo de despesas](exercises/2026/09/001-resumo-de-despesas/README.md) | 11/09/2026 | em andamento |
+| 001 | [Resumo de despesas](exercises/2026/09/001-resumo-de-despesas/README.md) | 11/09/2026 | em revisão |
