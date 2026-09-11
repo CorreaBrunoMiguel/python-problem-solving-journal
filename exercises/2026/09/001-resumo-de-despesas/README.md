@@ -1,10 +1,10 @@
 # 001 — Resumo de despesas
 
 - **Início:** 11/09/2026
-- **Estado:** em andamento
+- **Estado:** em revisão
 - **Objetivo técnico:** transformar registros de despesas em um resumo consistente.
 - **Autoria do enunciado:** assistente de IA.
-- **Implementação e raciocínio:** a serem produzidos pelo aluno.
+- **Implementação:** primeira tentativa entregue pelo aluno; explicação do raciocínio pendente.
 
 ## Problema
 
@@ -78,8 +78,8 @@ Registrar a versão do Python efetivamente utilizada e as instruções de execu�
 
 Cada tentativa será preservada por commit. Após commit e push do aluno, o assistente analisará os requisitos atendidos, erros, acertos, verificações e justificativas, sem alterar a solução.
 
-As análises serão identificadas como avaliações do assistente e vinculadas ao commit examinado. Reflexões e justificativas do aluno serão registradas apenas quando fornecidas por ele.
+As análises ficam em [REVIEW.md](REVIEW.md), identificadas como avaliações do assistente e vinculadas ao commit examinado. Reflexões e justificativas do aluno serão registradas apenas quando fornecidas por ele.
 
 Se o aluno decidir revisar a implementação, a nova tentativa será registrada em outro commit no mesmo arquivo. Requisitos essenciais pendentes mantêm o exercício aberto.
 
-**Situação atual:** enunciado disponibilizado; nenhuma tentativa de implementação analisada.
+**Situação atual:** tentativa 01 (`fe39594`) analisada. Nenhum erro funcional encontrado nos casos verificados. Em revisão para discussão das decisões e dos testes. Consulte o [parecer técnico](REVIEW.md).
