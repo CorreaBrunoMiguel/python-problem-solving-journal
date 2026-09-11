@@ -71,3 +71,41 @@ O enunciado e a orientação anterior sobre testes foram fornecidos pelo assiste
 Pergunta: **por que adicionar um e-mail somente quando ele ainda não está em inscritos preserva a ordem da primeira ocorrência?**
 
 Depois, trabalhar os testes de ordem não alfabética e independência da saída. Não é necessário reescrever a função ou introduzir framework. Nenhum código ou teste do aluno foi alterado.
+
+## Revisão 02 — 11/09/2026 — Encerramento
+
+- **Commit:** [be148f4](https://github.com/CorreaBrunoMiguel/python-problem-solving-journal/commit/be148f44f4a8da83e55750fd334f3eca7cff1e82).
+- **Mensagem:** `test: verifica ordem de chegada e independência da saída no desafio 002`.
+- **Estado:** concluído no escopo do desafio, com orientação na ampliação dos testes.
+- **Mudança analisada:** somente `test_solution.py`; a função permanece inalterada.
+
+### Verificação executada
+
+Executado o arquivo de testes com a solução do commit em Python 3.12.14 no ambiente do assistente. **Os 13 asserts passaram**, com saída vazia e código de saída zero. São três cenários: e-mails repetidos, lista vazia e e-mails únicos.
+
+Não foi repetida a bateria adicional da primeira revisão: a função não mudou e o risco concreto desta entrega estava nos novos testes.
+
+### Pendências resolvidas
+
+- **Ordem de chegada:** a lista com repetições agora começa por Carla, Ana, Eduardo, Bruno e Fernanda nas primeiras ocorrências. O retorno esperado respeita essa ordem não alfabética, e o total foi corretamente atualizado para quatro repetições.
+- **Entrada sem repetições:** foi acrescentado um cenário com seis e-mails únicos em ordem não alfabética, com comparação da lista e do retorno completo, e contagem zero.
+- **Independência da saída:** o aluno copia a entrada antes da chamada, obtém o resultado, acrescenta Leo à lista retornada e compara a entrada com a cópia original. O teste passou e verificaria o compartilhamento indevido da lista nesse cenário. A saída não foi copiada artificialmente antes do append.
+- **Preservação da entrada:** a verificação anterior do caso com repetições permanece presente e passou.
+
+### Compreensão e apoio recebido
+
+O aluno explicou que percorre os elementos na ordem de chegada, adiciona apenas os ainda ausentes e usa append, que acrescenta ao final. Essa explicação sustenta o entendimento da preservação das primeiras ocorrências. O assistente apenas ajustou a referência aos índices: for percorre elementos; o último índice positivo é n - 1, e -1 é uma indexação alternativa do último elemento.
+
+Houve orientação detalhada para o teste de independência: distinção entre preservação durante a chamada e alteração posterior da saída, uso de entrada sem repetições, cópia da entrada e não do retorno. O aluno implementou o teste, mas sua construção não é evidência de resolução inteiramente autônoma.
+
+A capacidade de construir verificações apresenta progresso; independência de objetos deve ser retomada futuramente para observar retenção. Complexidade continua sem explicação do aluno e, portanto, ainda não avaliada como competência dele. Nenhuma implementação completa foi fornecida pelo assistente no contexto disponível.
+
+### Melhorias não bloqueantes
+
+Continuam registradas a ambiguidade da docstring sobre repetidas, a expressão “entrada nula”, a ordem dos imports, detalhes de espaços e alinhamento e a quebra de linha final da solução. São melhorias de apresentação e precisão; não comprometem o comportamento e não motivam outra rodada obrigatória de commits.
+
+Os asserts sobre campos, extremos e objeto completo têm alguma redundância, aceitável nesta etapa. Não é necessário removê-los ou otimizar o algoritmo para concluir.
+
+### Encerramento
+
+Requisitos essenciais atendidos, verificações combinadas realizadas e explicação central apresentada. O desafio está concluído, sem equivaler a domínio consolidado. Nenhum código ou teste do aluno foi alterado pelo assistente; a primeira análise permanece preservada.
