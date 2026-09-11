@@ -36,3 +36,4 @@ registradas conforme os primeiros exercícios forem implementados.
 | --- | --- | --- | --- |
 | 001 | [Resumo de despesas](exercises/2026/09/001-resumo-de-despesas/README.md) | 11/09/2026 | concluído |
 | 002 | [Registro de inscrições](exercises/2026/09/002-registro-de-inscricoes/README.md) | 11/09/2026 | concluído |
+| 003 | [Sequência de medições](exercises/2026/09/003-sequencia-de-medicoes/README.md) | 11/09/2026 | em andamento |
