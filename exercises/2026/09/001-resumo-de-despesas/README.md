@@ -4,7 +4,7 @@
 - **Estado:** em revisão
 - **Objetivo técnico:** transformar registros de despesas em um resumo consistente.
 - **Autoria do enunciado:** assistente de IA.
-- **Implementação:** segunda entrega analisada; explicação do caso vazio registrada no review.
+- **Implementação:** terceira entrega analisada; explicações e apoio recebido registrados no review.
 
 ## Problema
 
@@ -105,7 +105,7 @@ Executar os asserts em modo normal, sem a opção `-O`.
 
 Se todos os asserts executados passarem e não houver impressões, o comando terminará sem saída. Uma condição falsa em um assert produzirá `AssertionError`. A ausência de falhas vale para os casos efetivamente verificados; não comprova cobertura completa.
 
-**Verificação desta reorganização:** sete asserts passaram no ambiente do assistente (Python 3.12.14), com os arquivos do commit `d98e9a8`. Detalhes e limites no [REVIEW.md](REVIEW.md).
+**Verificação atual:** oito asserts passaram no ambiente do assistente (Python 3.12.14), com os arquivos do commit `b87924e`. A comparação do retorno completo ainda não foi implementada; detalhes no [REVIEW.md](REVIEW.md).
 
 ## Registro de tentativas e análise
 
@@ -115,4 +115,4 @@ As análises ficam em [REVIEW.md](REVIEW.md), identificadas como avaliações do
 
 Se o aluno decidir revisar a implementação, a nova tentativa será registrada em outro commit no mesmo arquivo. Requisitos essenciais pendentes mantêm o exercício aberto.
 
-**Situação atual:** segunda entrega (`d98e9a8`) analisada. Nenhum erro funcional encontrado nos casos verificados. Permanecem pendentes verificações de preservação da entrada e retorno completo, padronização da indentação e discussão da mudança no else. Consulte o [parecer técnico](REVIEW.md).
+**Situação atual:** terceira entrega (`b87924e`) analisada. Preservação da entrada verificada pelo aluno. Falta usar o resultado esperado em uma comparação completa e incluir nele a categoria com zero. A formatação foi adiada para o próximo desafio por acordo e não bloqueia o 001. Consulte o [parecer técnico](REVIEW.md).
