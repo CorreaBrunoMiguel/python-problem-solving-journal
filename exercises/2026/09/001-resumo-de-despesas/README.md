@@ -1,10 +1,11 @@
 # 001 — Resumo de despesas
 
 - **Início:** 11/09/2026
-- **Estado:** em revisão
+- **Estado:** concluído
+- **Conclusão:** 11/09/2026
 - **Objetivo técnico:** transformar registros de despesas em um resumo consistente.
 - **Autoria do enunciado:** assistente de IA.
-- **Implementação:** terceira entrega analisada; explicações e apoio recebido registrados no review.
+- **Implementação:** entrega final analisada; explicações e apoio recebido registrados no review.
 
 ## Problema
 
@@ -105,7 +106,7 @@ Executar os asserts em modo normal, sem a opção `-O`.
 
 Se todos os asserts executados passarem e não houver impressões, o comando terminará sem saída. Uma condição falsa em um assert produzirá `AssertionError`. A ausência de falhas vale para os casos efetivamente verificados; não comprova cobertura completa.
 
-**Verificação atual:** oito asserts passaram no ambiente do assistente (Python 3.12.14), com os arquivos do commit `b87924e`. A comparação do retorno completo ainda não foi implementada; detalhes no [REVIEW.md](REVIEW.md).
+**Verificação atual:** nove asserts passaram no ambiente do assistente (Python 3.12.14), com os arquivos do commit `2bc5cbc`, incluindo preservação da entrada e comparação do retorno completo. Detalhes no [REVIEW.md](REVIEW.md).
 
 ## Registro de tentativas e análise
 
@@ -115,4 +116,4 @@ As análises ficam em [REVIEW.md](REVIEW.md), identificadas como avaliações do
 
 Se o aluno decidir revisar a implementação, a nova tentativa será registrada em outro commit no mesmo arquivo. Requisitos essenciais pendentes mantêm o exercício aberto.
 
-**Situação atual:** terceira entrega (`b87924e`) analisada. Preservação da entrada verificada pelo aluno. Falta usar o resultado esperado em uma comparação completa e incluir nele a categoria com zero. A formatação foi adiada para o próximo desafio por acordo e não bloqueia o 001. Consulte o [parecer técnico](REVIEW.md).
+**Situação atual:** concluído após revisão do commit `2bc5cbc`. Requisitos e verificações combinadas atendidos, com orientação nos testes. A formatação foi adiada para o próximo desafio por acordo. Conclusão não equivale a domínio consolidado; consulte o [parecer técnico](REVIEW.md).
