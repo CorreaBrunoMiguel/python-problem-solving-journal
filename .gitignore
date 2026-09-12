@@ -7,3 +7,6 @@ __pycache__/
 
 # Checkpoints de notebooks
 .ipynb_checkpoints/
+
+# Cache do Ruff
+.ruff_cache/
