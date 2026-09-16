@@ -65,3 +65,37 @@ Começar pela entrada vazia: chamar a função com uma lista vazia e comparar o 
 Depois, orientar a independência dos resumos por país. As demais sugestões permanecem registradas, sem exigir todas as alterações simultaneamente.
 
 Nenhum arquivo de implementação ou teste foi alterado pelo assistente.
+
+## Revisão 02 — 16/09/2026
+
+- **Commit:** [84d742d](https://github.com/CorreaBrunoMiguel/python-problem-solving-journal/commit/84d742d5b7b98845e83bce6799c2d207fdcf35c6).
+- **Mensagem:** `test: verifica entrada vazia e independência dos países no desafio 004`.
+- **Parecer:** os dois testes combinados foram implementados corretamente. Falta discutir a decisão central de classificação dos valores antes do encerramento.
+- **Escopo:** alteração somente em test_solution.py; implementação inalterada. READMEs não alterados.
+
+### Execução e evidências
+
+Executados os arquivos do commit em Python 3.12.14. O script terminou sem saída e com código zero: **quatro asserts passaram**.
+
+1. Preservação do conteúdo da entrada por comparação com deepcopy.
+2. Igualdade do retorno completo com o esperado.
+3. Resumo de ARG preservado após append em anos_ausentes de BRA.
+4. Entrada vazia produzindo {}.
+
+O teste de independência está posicionado depois da comparação integral do retorno e antes de resposta receber o resultado da lista vazia. A cópia é do resumo de ARG; a alteração é aplicada diretamente à lista de BRA, sem copiar artificialmente essa lista. O teste cobre a independência entre esses dois resumos no caso apresentado.
+
+O assert de identidade sem utilidade para detectar mutações foi removido. A atribuição `antes = registros` permaneceu sem uso; removê-la é uma limpeza recomendada, não uma falha funcional.
+
+Não foram repetidos os casos adicionais da primeira revisão porque a função não mudou. O teste de independência do aluno usa o exemplo existente e não representa uma bateria exaustiva para todos os pares de países.
+
+### Apoio e compreensão
+
+Os testes de entrada vazia e independência foram construídos com orientação passo a passo. O aluno apresentou os trechos e perguntou por que acrescentar um ano em BRA; foi esclarecido que se trata de uma alteração artificial para verificar compartilhamento indevido entre listas, não de um novo requisito sobre dados ausentes.
+
+O aluno declarou ter entendido e executou os testes antes do envio. A aplicação correta está verificada; a construção autônoma de testes ainda deve ser observada em situações futuras. Não se atribui autoria independente à seleção desses dois testes.
+
+### Próxima etapa
+
+Pergunta de compreensão: **na condição `if valor or valor == 0`, qual é o papel de `valor == 0`? O que aconteceria com zero se a condição fosse apenas `if valor`?**
+
+Não há outra alteração obrigatória de teste nesta etapa. As sugestões anteriores sobre nomes e condição explícita continuam registradas como melhorias. Nenhum código ou teste foi alterado pelo assistente.
