@@ -15,7 +15,6 @@ antes = registros
 original = deepcopy(registros)
 resposta = resumir_cobertura(registros)
 
-assert registros is antes, "A lista não mantém a identidade original."
 assert registros == original, "A função modificou o conteúdo da lista recebida."
 
 assert resposta == {
@@ -35,3 +34,10 @@ assert resposta == {
         "anos_ausentes": [2023],
     },
 }
+
+arg_antes = deepcopy(resposta["ARG"])
+resposta["BRA"]["anos_ausentes"].append(2026)
+assert resposta["ARG"] == arg_antes
+
+resposta = resumir_cobertura([])
+assert resposta == {}
