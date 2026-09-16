@@ -11,7 +11,6 @@ registros = [
     {"pais": "ARG", "ano": 2021, "valor": -2.3},
 ]
 
-antes = registros
 original = deepcopy(registros)
 resposta = resumir_cobertura(registros)
 

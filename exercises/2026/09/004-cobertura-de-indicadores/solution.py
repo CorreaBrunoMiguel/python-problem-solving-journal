@@ -25,18 +25,18 @@ def resumir_cobertura(registros):
     resposta = {}
 
     for registro in registros:
-        chave = registro["pais"]
+        pais = registro["pais"]
         ano = registro["ano"]
         valor = registro["valor"]
-        if chave not in resposta:
-            resposta[chave] = {"disponiveis": 0, "ausentes": 0, "anos_ausentes": []}
-        if valor or valor == 0:
-            resposta[chave]["disponiveis"] += 1
+        if pais not in resposta:
+            resposta[pais] = {"disponiveis": 0, "ausentes": 0, "anos_ausentes": []}
+        if valor is not None:
+            resposta[pais]["disponiveis"] += 1
         else:
-            resposta[chave]["ausentes"] += 1
-            resposta[chave]["anos_ausentes"].append(ano)
+            resposta[pais]["ausentes"] += 1
+            resposta[pais]["anos_ausentes"].append(ano)
 
-    for dict in resposta.values():
-        dict["anos_ausentes"].sort()
+    for resumo in resposta.values():
+        resumo["anos_ausentes"].sort()
 
     return resposta
