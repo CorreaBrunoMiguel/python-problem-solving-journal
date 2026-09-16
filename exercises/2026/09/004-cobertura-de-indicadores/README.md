@@ -1,10 +1,11 @@
 # 004 — Cobertura de indicadores
 
 - **Início:** 16/09/2026
-- **Estado:** em andamento
+- **Estado:** concluído
+- **Conclusão:** 16/09/2026
 - **Objetivo técnico:** agrupar registros por país e distinguir valores disponíveis de ausentes.
 - **Autoria do enunciado:** assistente de IA.
-- **Implementação e raciocínio:** a serem produzidos pelo aluno.
+- **Implementação:** entregue e revisada; explicações do aluno e apoio recebido registrados no [REVIEW.md](REVIEW.md).
 
 ## Problema
 
@@ -132,10 +133,10 @@ python exercises/2026/09/004-cobertura-de-indicadores/test_solution.py
 
 Executar sem `-O`. Se todos os asserts executados passarem e não houver impressões, o comando terminará sem saída.
 
-**Verificação atual:** nenhuma implementação recebida ou executada.
+**Verificação atual:** os quatro asserts da entrega final (`8ce1446`) passaram no ambiente do assistente (Python 3.12.14), assim como uma verificação adicional direcionada a zero inteiro, zero float, negativo, positivo e None. Resultados e limites no [REVIEW.md](REVIEW.md).
 
 ## Registro de tentativas e análise
 
 Faça commit e push da tentativa para revisão. O assistente analisará correção, clareza, testes e decisões sem alterar sua implementação. As revisões serão acrescentadas ao REVIEW.md, identificando o commit e o apoio recebido.
 
-**Situação atual:** enunciado disponibilizado; aguardando primeira tentativa. O desafio 003 permanece pausado.
+**Situação atual:** concluído após revisão do commit `8ce1446`. Requisitos essenciais atendidos, com orientação na construção dos testes e na refatoração. A docstring foi fornecida pelo assistente. Conclusão não equivale a domínio consolidado; consulte o [REVIEW.md](REVIEW.md). O desafio 003 permanece pausado.
