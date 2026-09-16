@@ -99,3 +99,39 @@ O aluno declarou ter entendido e executou os testes antes do envio. A aplicaçã
 Pergunta de compreensão: **na condição `if valor or valor == 0`, qual é o papel de `valor == 0`? O que aconteceria com zero se a condição fosse apenas `if valor`?**
 
 Não há outra alteração obrigatória de teste nesta etapa. As sugestões anteriores sobre nomes e condição explícita continuam registradas como melhorias. Nenhum código ou teste foi alterado pelo assistente.
+
+## Revisão 03 — 16/09/2026 — Parecer de encerramento
+
+- **Commit:** [8ce1446](https://github.com/CorreaBrunoMiguel/python-problem-solving-journal/commit/8ce14469feda8df5b1a9797591d98ce143df59e0).
+- **Mensagem:** `refactor: melhora clareza da solução do desafio 004`.
+- **Parecer:** requisitos essenciais atendidos e revisões combinadas concluídas. Apto para encerrar o D004, com orientação nos testes e na refatoração.
+- **READMEs:** atualização de estado e data de conclusão aguarda autorização específica do aluno.
+
+### Refatoração verificada
+
+- A condição passou de `valor or valor == 0` para `valor is not None`, expressando diretamente o contrato.
+- `chave` foi renomeada para `pais`.
+- `dict` foi renomeada para `resumo`, evitando ocultar o tipo embutido.
+- A atribuição sem uso `antes = registros` foi removida dos testes.
+
+Os nomes estão coerentes em todos os acessos; a organização do algoritmo foi preservada.
+
+### Execução
+
+Em Python 3.12.14, o arquivo de testes do commit foi executado sem alterações e terminou com código zero: **quatro asserts passaram**.
+
+Foi executado um caso adicional direcionado à condição alterada, com zero inteiro, zero float, negativo, positivo e None. O retorno integral apresentou quatro disponíveis, uma ausência e o ano correto: **passou**. Esse caso foi produzido pelo assistente e não foi incorporado à entrega do aluno.
+
+Não foram ampliadas as verificações além do risco concreto da refatoração. As verificações das revisões anteriores permanecem documentadas; a cobertura não é exaustiva.
+
+### Explicação do aluno e apoio recebido
+
+O aluno relatou que inicialmente utilizou apenas `if valor`, que o teste de retorno completo revelou a classificação incorreta de zero e que acrescentou a comparação com zero para corrigir o comportamento. Ele explicou corretamente que zero é falsy. Essa versão inicial com erro não foi inspecionada: o registro é do relato do aluno, não de um commit observado.
+
+A sintaxe `is not None` e as sugestões de nomes foram fornecidas pelo assistente e aplicadas pelo aluno. A docstring também foi fornecida pelo assistente, e os testes novos tiveram orientação passo a passo. A implementação inicial da lógica de agrupamento foi entregue pelo aluno sem solução completa fornecida no contexto acessível.
+
+Há evidência de compreensão da distinção entre zero e ausência e de uso de testes para investigar um resultado incorreto. Construção autônoma de testes permanece em progresso parcial; conclusão do exercício não equivale a domínio consolidado.
+
+### Encerramento técnico
+
+Não há pendência de correção identificada no contrato. As melhorias discutidas foram aplicadas e os testes pertinentes passaram. A próxima atualização administrativa é marcar o desafio como concluído no README específico e no índice, após autorização. Nenhuma implementação ou teste do aluno foi alterado pelo assistente.
