@@ -1,10 +1,10 @@
 # 003 — Sequência de medições
 
 - **Início:** 11/09/2026
-- **Estado:** em andamento
+- **Estado:** pausado
 - **Objetivo técnico:** identificar um trecho contínuo de crescimento em uma sequência, respeitando limites e desempate.
 - **Autoria do enunciado:** assistente de IA.
-- **Implementação e raciocínio:** a serem produzidos pelo aluno.
+- **Implementação e raciocínio:** abordagem discutida com orientação; implementação ainda não revisada.
 
 ## Problema
 
@@ -105,4 +105,14 @@ Executar sem `-O`. Se todos os asserts executados passarem e não houver impress
 
 Faça commit e push da tentativa para revisão. O assistente analisará correção, clareza, testes e decisões sem alterar sua implementação. As análises serão acrescentadas ao REVIEW.md, identificando o commit e o apoio recebido.
 
-**Situação atual:** enunciado disponibilizado; aguardando primeira tentativa.
+**Situação atual:** pausado a pedido do aluno; ponto de retomada registrado abaixo.
+
+## Pausa e retomada
+
+- **Data da pausa:** 16/09/2026.
+- **Estado:** pausado.
+- **Ponto atual:** construção da abordagem com `while` para identificar os trechos crescentes e selecionar o maior. O aluno propôs registrar os trechos e comparar seus tamanhos ao final.
+- **Pendência:** organizar o avanço do índice e o encerramento dos trechos, incluindo o último, traduzindo o raciocínio em código.
+- **Próxima ação:** percorrer manualmente uma lista curta e acompanhar índice, início e fim do trecho antes de retomar a implementação.
+- **Situação da avaliação:** implementação ainda não revisada; a pausa não representa conclusão.
+
