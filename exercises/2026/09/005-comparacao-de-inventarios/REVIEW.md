@@ -94,3 +94,11 @@ Os cenários foram propostos progressivamente pelo assistente. As entradas do ca
 ### Estado e próximo checkpoint
 
 Implementação e testes aprovados nesta revisão, sem correção funcional necessária. Antes do encerramento pedagógico, resta uma explicação breve do aluno sobre por que a solução percorre os dois inventários. READMEs continuam sem alteração, sujeitos à autorização específica. Nenhum código do aluno foi modificado.
+
+## Encerramento — 18/09/2026
+
+Após a revisão 02, o aluno explicou: “se não percorrermos anterior não saberíamos quais foram removidos”. A resposta identifica corretamente a finalidade do segundo laço na implementação entregue: arquivos removidos não aparecem no inventário atual.
+
+O checkpoint de compreensão foi atendido. Desafio concluído no escopo combinado, com implementação e testes aprovados e orientação recebida registrada. Isso não implica domínio independente de toda a construção de testes nem cobertura exaustiva.
+
+O aluno autorizou atualizar os READMEs geral e local para registrar a conclusão e vincular este histórico. As revisões anteriores foram preservadas; não houve mudança na solução ou nos testes neste encerramento.
