@@ -67,3 +67,30 @@ O exemplo de entrada e o esperado vêm do enunciado. Há evidência de aplicaç�
 Próxima tarefa: testar a independência das listas retornadas a partir do resultado de `comparar_inventarios({}, {})`, acrescentando um nome a uma categoria e verificando que as outras permanecem vazias. O aluno escreverá e apresentará o trecho antes de outro commit.
 
 As demais sugestões ficam registradas para avanço por etapas, sem cobrança simultânea. Nenhum código ou teste do aluno foi alterado.
+
+## Revisão 02 — ampliação dos testes — 18/09/2026
+
+- **Commit avaliado:** [5cf115e](https://github.com/CorreaBrunoMiguel/python-problem-solving-journal/commit/5cf115e6b6ed1fc73b5b4efd8e2dd60fc836e687).
+- **Mensagem:** `test: amplia cobertura dos testes do desafio 005`.
+- **Resultado:** os nove asserts enviados passaram em Python 3.12.14, executando o arquivo sem otimização, com saída vazia e código zero.
+- **Escopo da alteração:** somente `test_solution.py`; a implementação permanece igual à primeira entrega.
+
+### Evolução observada
+
+Foram incorporados os cenários trabalhados na conversa: mutação de adicionados sem afetar as outras categorias; anterior preenchido e atual vazio; anterior vazio e atual preenchido; aumento e redução no mesmo caso, com múltiplos alterados ordenados. Os casos de adição e remoção incluem arquivo de zero bytes.
+
+Os retornos esperados estão corretos. As pendências de cobertura propostas na primeira revisão foram atendidas no nível combinado. O teste de independência enviado verifica adicionados contra as outras duas listas; isoladamente, não detectaria compartilhamento somente entre removidos e alterados. Essa relação já foi verificada pelo assistente na revisão anterior, e a implementação cria três listas distintas.
+
+### Limites e melhorias não bloqueantes
+
+Nesta revisão foram executados os testes enviados; os cenários extras da revisão anterior não foram repetidos, pois a solução não mudou. Não se afirma cobertura exaustiva.
+
+Continuam opcionais as melhorias de nomes e de elif da primeira revisão. Mensagens que identifiquem cada cenário e comentários breves sobre sua finalidade melhorariam a leitura do arquivo de testes; a ausência deles não altera os resultados.
+
+### Orientação e autoria
+
+Os cenários foram propostos progressivamente pelo assistente. As entradas do caso de aumento/redução foram fornecidas pelo assistente; o aluno escreveu o retorno esperado e os asserts apresentados. O aluno solicitou manter esse modelo: o assistente identifica lacunas e fornece entradas, e o aluno prevê resultados, escreve verificações e executa os testes. Isso constitui prática guiada, sem presumir construção independente de toda a suíte.
+
+### Estado e próximo checkpoint
+
+Implementação e testes aprovados nesta revisão, sem correção funcional necessária. Antes do encerramento pedagógico, resta uma explicação breve do aluno sobre por que a solução percorre os dois inventários. READMEs continuam sem alteração, sujeitos à autorização específica. Nenhum código do aluno foi modificado.
