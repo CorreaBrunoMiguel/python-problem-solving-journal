@@ -37,3 +37,47 @@ resposta = comparar_inventarios({}, {})
 assert resposta == {"adicionados": [], "removidos": [], "alterados": []}, (
     "Função não retorna o objeto correto ao receber dois dicionários vazios"
 )
+
+resposta["adicionados"].append("teste.csv")
+assert resposta["removidos"] == []
+assert resposta["alterados"] == []
+
+anterior = {"teste1.csv": 0, "teste2.csv": 100}
+atual = {}
+
+resposta = comparar_inventarios(anterior, atual)
+
+assert resposta == {
+    "adicionados": [],
+    "removidos": ["teste1.csv", "teste2.csv"],
+    "alterados": [],
+}, "Função retorna objeto diferente do esperado"
+
+anterior = {}
+atual = {"super.csv": 0, "novo.csv": 200}
+
+resposta = comparar_inventarios(anterior, atual)
+
+assert resposta == {
+    "adicionados": ["novo.csv", "super.csv"],
+    "removidos": [],
+    "alterados": [],
+}, "Função retorna objeto diferente do esperado"
+
+anterior = {
+    "vendas.csv": 500,
+    "clientes.csv": 200,
+}
+
+atual = {
+    "vendas.csv": 300,
+    "clientes.csv": 450,
+}
+
+resposta = comparar_inventarios(anterior, atual)
+
+assert resposta == {
+    "adicionados": [],
+    "removidos": [],
+    "alterados": ["clientes.csv", "vendas.csv"],
+}, "Função retorna objeto diferente do esperado"
