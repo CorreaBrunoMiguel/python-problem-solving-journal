@@ -38,4 +38,4 @@ registradas conforme os primeiros exercícios forem implementados.
 | 002 | [Registro de inscrições](exercises/2026/09/002-registro-de-inscricoes/README.md) | 11/09/2026 | concluído |
 | 003 | [Sequência de medições](exercises/2026/09/003-sequencia-de-medicoes/README.md) | 11/09/2026 | pausado |
 | 004 | [Cobertura de indicadores](exercises/2026/09/004-cobertura-de-indicadores/README.md) | 16/09/2026 | concluído |
-| 005 | [Comparação de inventários](exercises/2026/09/005-comparacao-de-inventarios/README.md) | 16/09/2026 | em andamento |
+| 005 | [Comparação de inventários](exercises/2026/09/005-comparacao-de-inventarios/README.md) | 16/09/2026 | concluído |
