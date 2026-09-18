@@ -1,10 +1,13 @@
 # 005 — Comparação de inventários
 
 - **Início:** 16/09/2026
-- **Estado:** em andamento
+- **Estado:** concluído
+- **Conclusão:** 18/09/2026
 - **Objetivo técnico:** comparar presença e valores de chaves entre dois dicionários.
 - **Autoria do enunciado e código-base:** assistente de IA.
-- **Implementação e testes:** a serem produzidos pelo aluno.
+- **Implementação:** aluno, sobre assinatura e docstring fornecidas pela IA.
+- **Testes:** aluno, com orientação e entradas adicionais fornecidas pela IA.
+- **Revisões:** [histórico de análise técnica](REVIEW.md).
 
 ## Problema
 
@@ -84,11 +87,11 @@ Retorno esperado:
 
 | Arquivo | Responsabilidade |
 | --- | --- |
-| `solution.py` | Assinatura, docstring e pass fornecidos pela IA; implementar o corpo |
-| `test_solution.py` | Casos e asserts produzidos pelo aluno |
+| `solution.py` | Corpo implementado pelo aluno; assinatura e docstring fornecidas pela IA |
+| `test_solution.py` | Asserts produzidos pelo aluno, com orientação na escolha de cenários e entradas |
 | `REVIEW.md` | Análises do assistente após as entregas |
 
-O código-base não implementa o contrato: pass é apenas um marcador provisório.
+O código-base inicial continha `pass` como marcador provisório; o aluno o substituiu pela implementação.
 
 Comece com os testes que conseguir construir. Compare o retorno completo com o esperado e procure casos além do exemplo. Comente brevemente a finalidade dos testes. A preservação das duas entradas e a independência das listas fazem parte do contrato.
 
@@ -105,7 +108,7 @@ Use a configuração Ruff do projeto e nomes que expressem o papel dos dados.
 
 ### Como executar os testes
 
-Após criar test_solution.py, execute a partir da raiz:
+Execute a partir da raiz:
 
 ```bash
 python exercises/2026/09/005-comparacao-de-inventarios/test_solution.py
@@ -113,10 +116,18 @@ python exercises/2026/09/005-comparacao-de-inventarios/test_solution.py
 
 Execute sem `-O`. Se todos os asserts executados passarem e não houver prints, o comando terminará sem saída.
 
-**Verificação atual:** apenas código-base fornecido; nenhuma solução implementada ou avaliada.
+**Verificação atual:** os nove asserts da entrega [5cf115e](https://github.com/CorreaBrunoMiguel/python-problem-solving-journal/commit/5cf115e6b6ed1fc73b5b4efd8e2dd60fc836e687) passaram no ambiente do assistente, com Python 3.12.14. Cenários adicionais executados na primeira revisão e limites da verificação estão registrados no [REVIEW.md](REVIEW.md).
 
 ## Acompanhamento
 
 As análises preservarão as tentativas no histórico e distinguirão implementação do aluno, código-base e orientação recebida. Alterações nos READMEs dependem de autorização.
 
-**Situação atual:** aguardando primeira tentativa. O desafio 003 permanece pausado.
+### Registro de conclusão — 18/09/2026
+
+- Primeira implementação avaliada sem erro funcional encontrado.
+- Testes ampliados progressivamente para cobrir independência das listas, um inventário vazio, zero bytes, aumento, redução e ordenação de múltiplos alterados.
+- Na verificação de compreensão, o aluno explicou que percorrer apenas `atual` não permite encontrar arquivos removidos, pois esses nomes só estão em `anterior`.
+- Implementação, testes e explicação aprovados para o escopo deste desafio. Melhorias opcionais permanecem no histórico de revisão.
+- Padrão combinado para os testes: o assistente identifica lacunas e fornece entradas; o aluno prevê a saída, escreve os asserts e executa as verificações.
+
+**Situação atual:** concluído. O desafio 003 permanece pausado.
