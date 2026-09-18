@@ -1,6 +1,3 @@
-# Código-base fornecido pelo assistente de IA; implementação a cargo do aluno.
-
-
 def comparar_inventarios(anterior, atual):
     """
     Compara nomes e tamanhos de arquivos entre dois inventários.
@@ -24,4 +21,20 @@ def comparar_inventarios(anterior, atual):
         As entradas não são modificadas e as listas retornadas são
         independentes. Não há acesso ao sistema de arquivos.
     """
-    pass
+    resposta = {"adicionados": [], "removidos": [], "alterados": []}
+
+    for item in atual:
+        if item not in anterior:
+            resposta["adicionados"].append(item)
+        else:
+            if atual[item] != anterior[item]:
+                resposta["alterados"].append(item)
+
+    for item in anterior:
+        if item not in atual:
+            resposta["removidos"].append(item)
+
+    for lista in resposta.values():
+        lista.sort()
+
+    return resposta
