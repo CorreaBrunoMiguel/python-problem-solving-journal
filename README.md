@@ -39,3 +39,4 @@ registradas conforme os primeiros exercícios forem implementados.
 | 003 | [Sequência de medições](exercises/2026/09/003-sequencia-de-medicoes/README.md) | 11/09/2026 | pausado |
 | 004 | [Cobertura de indicadores](exercises/2026/09/004-cobertura-de-indicadores/README.md) | 16/09/2026 | concluído |
 | 005 | [Comparação de inventários](exercises/2026/09/005-comparacao-de-inventarios/README.md) | 16/09/2026 | concluído |
+| 006 | [Conciliação de pedidos e pagamentos](exercises/2026/09/006-conciliacao-de-pagamentos/README.md) | 18/09/2026 | em andamento |
